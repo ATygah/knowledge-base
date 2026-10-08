@@ -4,4 +4,4 @@ Notes on the hardware and system stack behind LLM inference: GPU HBM, inference 
 
 ## Articles
 
-- [AMD Infinity Context](AMD-Infinity-Context.md) — AMD's approach to extending KV-cache capacity beyond local HBM through shared storage and high-performance networking. Covers NFS, RDMA, DRAM, NVMe, hipFile, hipObject, and implications for MoE expert prefetching.
+- [AMD Infinity Context](AMD-Infinity-Context.md) — Explains the shared NVMe SSD-backed storage architecture: storage servers and GPU nodes connect via RDMA NICs and Ethernet switches, enabling direct-to-HBM KV-cache transfers when supported. Distinguishes the SSD backing tier from NFS-server DRAM caching, and examines NFS-over-RDMA, hipFile, and implications for MoE expert prefetching.
