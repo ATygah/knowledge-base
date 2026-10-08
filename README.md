@@ -9,4 +9,4 @@ Within a separate directory for each topic, there will be individual `.md` files
 
 ### LLM Serving: Hardware
 
-- [AMD Infinity Context](LLM-Serving-Hardware/AMD-Infinity-Context.md) — AMD's approach to extending LLM KV-cache capacity beyond GPU HBM using shared storage and accelerated networking. Examines NFS, remote DRAM, NVMe SSDs, RDMA NICs, and the hipFile/hipObject software interfaces.
+- [AMD Infinity Context](LLM-Serving-Hardware/AMD-Infinity-Context.md) — Uses a shared, NVMe SSD-backed storage pool connected to GPU servers through RDMA-capable NICs and network switches, enabling KV-cache transfers into GPU HBM without host-DRAM staging where supported. Explores why NVMe provides capacity while NFS, remote DRAM caching, hipFile, and NIC-based data movement determine the access path.
